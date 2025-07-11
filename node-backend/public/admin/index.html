@@ -3,35 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <title>Village-Stay — Admin Panel</title>
-  <!-- Google Font for clean look -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Local CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f4f4f4; }
+    h1 { margin-bottom: 1rem; }
+    h2 { margin-top: 2rem; }
+    .card {
+      border: 1px solid #ccc; background: #fff; border-radius: 8px;
+      padding: 1rem; margin-bottom: 1rem;
+    }
+    .flag-btn {
+      background: #dc3545; color: #fff; border: none;
+      padding: 0.3rem 0.7rem; border-radius: 4px; cursor: pointer;
+    }
+    .flag-btn:hover { background: #c82333; }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>🛡️ Village-Stay: Admin Dashboard</h1>
-  </header>
+  <h1>👨‍💼 Village-Stay Admin Dashboard</h1>
 
-  <div class="container">
-    <h2>Flagged Listings</h2>
+  <h2>📌 Listed Stays</h2>
+  <div id="staysContainer"></div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Stay Name</th>
-          <th>Issue</th>
-          <th>Status</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody id="flaggedTable">
-        <!-- Dynamic rows will appear here -->
-      </tbody>
-    </table>
-  </div>
+  <h2>📌 Bookings</h2>
+  <div id="bookingsContainer"></div>
 
-  <!-- Local JS -->
   <script src="admin.js"></script>
 </body>
 </html>
