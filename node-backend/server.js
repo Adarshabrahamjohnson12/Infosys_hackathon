@@ -7,9 +7,6 @@ const multer = require('multer');
 const FormData = require('form-data');
 const fs = require('fs');
 
-
-
-
 const app = express();
 const upload = multer();
 app.use(express.json()); // For JSON POST
@@ -87,7 +84,7 @@ app.post('/api/chatbot', async (req, res) => {
   }
 });
 
-// === NEW: Host Save ===
+// === Host Save ===
 app.post('/api/host/upload', upload.single('stayImage'), (req, res) => {
   try {
     const stays = JSON.parse(fs.readFileSync('stays.json'));
@@ -107,7 +104,7 @@ app.post('/api/host/upload', upload.single('stayImage'), (req, res) => {
   }
 });
 
-// === NEW: User Get Stays ===
+// === User Get Stays ===
 app.get('/api/stays', (req, res) => {
   try {
     const stays = JSON.parse(fs.readFileSync('stays.json'));
@@ -118,7 +115,7 @@ app.get('/api/stays', (req, res) => {
   }
 });
 
-// === NEW: User Book Stay ===
+// === User Book Stay ===
 app.post('/api/book', (req, res) => {
   try {
     const bookings = JSON.parse(fs.readFileSync('bookings.json'));
@@ -136,7 +133,37 @@ app.post('/api/book', (req, res) => {
   }
 });
 
-// Start
+// === Admin Get Bookings ===
+app.get('/api/bookings', (req, res) => {
+  try {
+    const bookings = JSON.parse(fs.readFileSync('bookings.json'));
+    res.json(bookings);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ msg: 'Failed to load bookings.' });
+  }
+});
+
+// === Admin Flag Stay ===
+app.post('/api/flag/:id', (req, res) => {
+  try {
+    const stays = JSON.parse(fs.readFileSync('stays.json'));
+    const stayId = parseInt(req.params.id);
+    const index = stays.findIndex(s => s.id === stayId);
+    if (index !== -1) {
+      stays[index].flagged = true;
+      fs.writeFileSync('stays.json', JSON.stringify(stays, null, 2));
+      res.json({ msg: `✅ Stay ID ${stayId} flagged.` });
+    } else {
+      res.status(404).json({ msg: 'Stay not found.' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ msg: 'Failed to flag stay.' });
+  }
+});
+
+// === Start ===
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`✅ Node server running → http://localhost:${PORT}`);
