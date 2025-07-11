@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Green Farm Stay",
+    "description": "Stay with local farmers, experience organic food & rural life.",
+    "image": "test.jpg",
+    "flagged": false
+  },
+  {
+    "id": 2,
+    "name": "Riverside Cottage",
+    "description": "Relax by the river, fish with locals, live simple village life.",
+    "image": "test2.jpg",
+    "flagged": false
+  },
+  {
+    "id": 1752264389259,
+    "name": "Adarsh-stay",
+    "description": "dd",
+    "image": "test1.jpg",
+    "flagged": false
+  },
+  {
+    "id": 1752264435997,
+    "name": "Adarsh-stay",
+    "description": "dd",
+    "image": "test1.jpg",
+    "flagged": false
+  },
+  {
+    "id": 1752264436546,
+    "name": "Adarsh-stay",
+    "description": "dd",
+    "image": "test1.jpg",
+    "flagged": false
+  },
+  {
+    "id": 1752264482960,
+    "name": "Thejus-stay1",
+    "description": "gg",
+    "image": "old_image1 (2).jpg",
+    "flagged": false
+  },
+  {
+    "id": 1752264484033,
+    "name": "Thejus-stay1",
+    "description": "gg",
+    "image": "old_image1 (2).jpg",
+    "flagged": false
+  },
+  {
+    "id": 1752264484194,
+    "name": "Thejus-stay1",
+    "description": "gg",
+    "image": "old_image1 (2).jpg",
+    "flagged": false
+  },
+  {
+    "id": 1752264771772,
+    "name": "Narayanan",
+    "description": "big in kerala",
+    "image": "test1.jpg",
+    "flagged": false
+  },
+  {
+    "id": 1752264772992,
+    "name": "Narayanan",
+    "description": "big in kerala",
+    "image": "test1.jpg",
+    "flagged": false
+  }
+]
