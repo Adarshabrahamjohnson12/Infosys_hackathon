@@ -1,0 +1,60 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 2rem;
+  background: #f7f7f7;
+}
+
+header h1 {
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem;
+}
+
+.book-btn {
+  background: #4CAF50;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #45a049;
+}
+
+#botReply {
+  margin-top: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Village-Stay — Host</title>
+</head>
+<body>
+  <h1>🏡 Host Portal</h1>
+  <form id="listingForm" enctype="multipart/form-data">
+    <input type="text" name="stayName" placeholder="Stay Name" required /><br />
+    <textarea name="description" placeholder="Description" required></textarea><br />
+    <input type="file" name="stayImage" /><br />
+    <button type="submit">Submit Stay</button>
+  </form>
+  <div id="hostResult"></div>
+
+  <script>
+    const form = document.getElementById('listingForm');
+    const resultDiv = document.getElementById('hostResult');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch('/api/host/upload', {
+        method: 'POST',
+        body: formData
+      });
+      const data = await response.json();
+      resultDiv.innerText = data.msg;
+    });
+  </script>
+</body>
+</html>
