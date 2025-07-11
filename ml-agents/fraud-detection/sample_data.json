@@ -1,0 +1,24 @@
+[
+  {
+    "booking_id": "B123",
+    "user_id": "U001",
+    "host_id": "H123",
+    "payment_id": "PAY567",
+    "timestamp": "2025-07-12 10:00:45"
+  },
+  {
+    "booking_id": "B124",
+    "user_id": "U002",
+    "host_id": "H123",
+    "payment_id": "PAY567",
+    "timestamp": "2025-07-12 09:59:30"
+  },
+  {
+    "booking_id": "B125",
+    "user_id": "U003",
+    "host_id": "H123",
+    "payment_id": "PAY999",
+    "timestamp": "2025-07-12 10:00:10"
+  }
+]
+    
